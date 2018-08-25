@@ -310,3 +310,6 @@ body {
 * {
   font-family: "Helvetica Neue", sans-serif;
 }
+.reveal section img {
+  border:0;
+}

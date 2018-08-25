@@ -61,7 +61,7 @@
                         <img src="https://www.digitallearning.es/wp-content/uploads/2017/08/HTML5_sticker.png" alt="">
                     </section>
                     <section>
-                        <h2>Tecnologias</h2>
+                        <h2>Technology</h2>
                         <img src="http://popel-studio.com/images/blog/what-is-html5/html5-illu.png" width="60%">
                     </section>
                 </section>
@@ -72,353 +72,226 @@
     <img src="https://tweakyourbiz.com/wp-content/uploads/2018/05/main-image-1024x688.png" style="background:none;border:0;box-shadow:none;">
   </section>
   <section>
-    <img src="https://i.imgur.com/Q3cUg29.gif">
-    <h2>Si, una vez mas el meme de Peter Griffin</h2>
+    <h2>Installable - App Like</h2>
+    <img src="https://cdn-images-1.medium.com/max/2000/1*7mUxFg5KuYdenGZHp23MtA.png" alt="">
   </section>
   <section>
-    <h2>CSS needs a hero</h2>
-    <pre><code>
-body {
-  font: 12px Helvetica, Arial, sans-serif;
-}
-a.button {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-    </code></pre>
+    <img src="https://developers.google.com/web/progressive-web-apps/images/pwa-reliable.png" width="50%">
+    <h2>Reliability</h2>
+    <img src="https://cdn-images-1.medium.com/max/1600/1*pwtKc5DQjZFLmxVvA8IEfA.gif" alt="" width="40%">
   </section>
   <section>
-    <h2>How if we could omit braces?</h2>
-    <pre><code>
-body
-  font: 12px Helvetica, Arial, sans-serif;
-
-a.button
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-    </code></pre>
+    <h2>Faster</h2>
+    <img src="https://developers.google.com/web/progressive-web-apps/images/pwa-fast.png" alt="">
   </section>
   <section>
-    <h2>How about semi-colons?</h2>
-    <pre><code>
-body
-  font: 12px Helvetica, Arial, sans-serif
-
-a.button
-  -webkit-border-radius: 5px
-  -moz-border-radius: 5px
-  border-radius: 5px
-    </code></pre>
-  </section>
-  <section>
-    <h2>Keep things DRY</h2>
-    <i>DRY = Don't Repeat Yourself</i>
-    <pre><code>
-border-radius()
-  -webkit-border-radius: arguments
-  -moz-border-radius: arguments
-  border-radius: arguments
-
-body
-  font: 12px Helvetica, Arial, sans-serif
-
-a.button
-  border-radius(5px)  
-    </code></pre>
-  </section>
-<section>
-  <h2>How about transparent mixins?</h2>
-  <pre><code>
-border-radius()
-  -webkit-border-radius: arguments
-  -moz-border-radius: arguments
-  border-radius: arguments
-
-body
-  font: 12px Helvetica, Arial, sans-serif
-
-a.button
-  border-radius: 5px
-  </code></pre>
-</section>
-<section>
-  <h2>Create & Share</h2>
-  <pre><code>
-@import 'vendor'
-
-body
-  font: 12px Helvetica, Arial, sans-serif
-
-a.button
-  border-radius: 5px
-  </code></pre>
-</section>
-<section>
-  <h2>What if it were all optional?</h2>
-  <pre><code>
-fonts = helvetica, arial, sans-serif
-
-body {
-  padding: 50px;
-  font: 14px/1.4 fonts;
-}
-  </code></pre>
-</section>
-<section>
-  <h2>Si eso te gusta, mejor usa Stylus!</h2>
-  <a href="http://stylus-lang.com/" target="_blank">http://stylus-lang.com/</a>
-</section>
-</section>
-<!-- End Stylus section -->
-<!-- Init CoffeeScript section -->
-<section>
-  <section>
-    <h2>CoffeeScript</h2>
-    <img src="http://devstickers.com/assets/img/pro/t4mv.png">
-  </section>
-  <section>
-  <h2>Vista rapida</h2>
-    <pre class="two"><code>
-      # Asigancion:
-      number = 42
-      opposite = true
-
-      # Condicionales
-      number = 1304 if opposite
-
-      # Functions
-      cuadrado = (x) -> x * x
-
-      # Arrays
-      list = [1, 2, 3, 4, 5]
-    </code></pre>
-    <pre class="two"><code>
-      var number, apposite, cuadrado list;
-
-      number = 42;
-
-      opposite = true;
-
-      if (opposite) {
-        number = -42;
-      }
-
-      cuadrado = function(x) {
-        return x * x;
-      }
-
-      list = [1, 2, 3, 4, 5];
-    </code></pre>
-  </section>
-  <section>
-    <h2>Vista rapida</h2>
-    <pre class="two"><code>
-# Objetos
-math =
-  root: Math.sqrt
-  square: square
-  cube: (x) -> x * square x
-
-# Existencia
-alert "Epa! Coffescript" if elvis?
-
-# Array comprehensions
-cubes = (math.cube num for num in list)
-    </code></pre>
-    <pre class="two"><code>
-var math, cubes;
-// Objetos
-math = {
-  root: Math.sqrt,
-  square: square,
-  cube: function(x){
-    return x * square(x)
-  }
-};
-
-// Existencia
-if (typeof elvis !== "undefined" && elvis !== null){
-  alert('Epa! Coffescript');
-}
-
-// Array comprehensions
-cubes = (function() {
-  var i, len, results;
-  results = [];
-  for (i = 0, len = list.length; i < len; i++) {
-    num = list[i];
-    results.push(math.cube(num));
-  }
-  return results;
-})();
-      </code>
-    </pre>
-  </section>
-  <section>
-    <h2>Mas info</h2>
-    <a href="http://coffeescript.org/">http://coffeescript.org/</a>
-    <h2>Util</h2>
-    <a href="http://js2.coffee/">http://js2.coffee/</a>
+    <h2>Engaging</h2>
+    <img src="https://developers.google.com/web/fundamentals/app-install-banners/images/add-to-home-screen.gif" width="50%" alt="">
   </section>
 </section>
-<!-- End CoffeeScript section -->
-<!-- Init gulp section -->				
+<!-- End PWA section -->
+<!-- Init Technology section -->
 <section>
-	<section data-background-image="https://carlosazaustre.es/blog/content/images/2014/12/2014-03-10-07.jpg">
-		<h2>Gulp</h2>
-		<h3>The streaming build system</h3>
-	</section>
   <section>
-    <h2>Antes de empezar</h2>
-    <ul >
-      <li> Instalar <a href="https://nodejs.org/en/">Node.js</a></li>
-      <li>
-        Iniciar modulo
-      </li>
-    </ul>
-
-      <pre><code>
-        $ npm init
-      </code></pre>
+    <h2>But, what we need to implement it?</h2>
     <ul>
-      <li> Instalar modulos con npm</li>
-    </ul>
-    <pre><code>
-      $ npm install --save-dev gulp
-      $ npm install --save-dev gulp-jade
-    </code>
-    </pre>
-  </section>
-  <section>
-    <h2>Era pre-gulp - Grunt</h2>
-    <img src="http://frontendlabs.io/wp-content/uploads/2014/08/grunt-file-manipulation.png">
-    <br>
-    <i>Source: <a href="http://frontendlabs.io">Frontendlabs.io</a></i>
-  </section>
-  <section>
-    <h2>Ahora con gulp</h2>
-
-    <img src="http://frontendlabs.io/wp-content/uploads/2014/08/gulp-file-manipulation.png">
-    <br>
-    <i>Source: <a href="http://frontendlabs.io">Frontendlabs.io</a></i>
-  </section>
-  <section>
-    <h2>Como funciona gulp?</h2>
-    <ul>
-      <li>Selecciona archivos</li>
-      <li>Lo transforma</li>
-      <li>Los repone o re-ubica una copia</li>
+      <li>Chrome Dev Tools</li>
+      <li>Manifest</li>
+      <li>Push Notification</li>
+      <li>Cache API</li>
+      <li>Service Worker</li>
+      <li>Workbox</li>
+      <li>Web Storage API</li>
+      <li>Ligthhouse</li>
     </ul>
   </section>
   <section>
-    <h2>Gulp solo tiene 4 comandos!</h2>
-    <p>Sus cuatro fantasticos</p>
-    <img src="http://www.guerra-creativa.com/img/uploads/images/lfgfm290.jpg" width="50%">
-  </section>
-  <section >
-    <img src="http://cdne.elbocon.pe/thumbs/uploads/articles/images/seleccion-peruana-es-momento-d-jpg_900x0.jpg">
-    <h2>Nope!</h2>
-  </section>
-  <section data-background-image="https://i.ytimg.com/vi/liYwotnUado/maxresdefault.jpg">
-    <h2 style="background:rgba(0,0,0,.9)">
-    Gulp task <br>
-      Gulp src <br>
-      Gulp dest <br>
-      Gulp watch </h2>
-    </ul>
-    <br>
+    <h2>Chrome Dev Tools</h2>
+    <img src="https://cdn-images-1.medium.com/max/620/1*AO_YIKlU_YHPydGBu2DH9w.jpeg" alt="">
   </section>
   <section>
-    <h2>Gulp task</h2>
-    <pre><code>
-      gulp.task('nombretarea',function(){
-        // aqui continuamos
-      });
-    </code></pre>
+    <h2>Manifest</h2>
+    <img src="https://cdn-images-1.medium.com/max/1600/1*k07wulFO297SXn7EZ-Xaow.png">
   </section>
   <section>
-    <h2>Gulp src</h2>
-    <pre><code>
-      gulp.task('compilarJade',function(){
-        gulp.src('ruta/de/archivo')
-        // aun continuamos aqui
-      });
-    </code></pre>
+    <h2>Push Notification</h2>
+    <img src="http://s3.amazonaws.com/lurndownloads/blog/wp-content/uploads/2017/04/12044341/img1.jpg" alt="">
   </section>
   <section>
-    <h2>Gulp dest</h2>
-    <pre><code>
-      gulp.task('compilarJade',function(){
-        gulp.src('./jade/*.jade')
-          .pipe(gulp.dest('ruta/de/destino'));
-      });
-    </code></pre>
-    <i>Tarea simple que mueve un archivo de un lugar a otro</i>
+    <h2>Web Cache API</h2>
+    <img src="http://studyclues.com/wp-content/uploads/2016/05/HTML5-appCache.png" alt="">
   </section>
   <section>
-    <h2>wait! Que es pipe?</h2>
-    <img src="http://www.codeproject.com/KB/Nodejs/1064203/57430c2c-9e8e-11e5-82cc-a6ff65e6b75f.png" width="50%">
-  </section>
-  <section>
-    <h2>Gulp dest</h2>
-    <pre><code>
-      gulp.task('compilarJade',function(){
-        gulp.src('./jade/*.jade')
-          .pipe(jade())
-          .pipe(gulp.dest('./public/'));
-      });
-      //continuamos aqui
-    </code></pre>
-    <i>Tarea para compilar jade</i>
-  </section>
-  <section>
-    <h2>Gulp watch</h2>
-    <pre><code>
-      // tarea para compilar jade
-      gulp.task('compilarJade',function(){
-        gulp.src('./jade/*.jade')
-          .pipe(jade())
-          .pipe(gulp.dest('./public/'));
-      });
-
-      // watch
-      gulp.watch('./jade/*.jade',['compilarJade']);
-    </code></pre>
-  </section>
-  <section>
-    <h2>Estructura de un archivo de gulp</h2>
-    <pre>
-      <code>
-      // variables que contienen los modulos que usamos
-      var gulp = require('gulp');
-      var jade = require('gulp-jade');
-
-      // tarea para compilar jade
-      gulp.task('compilarJade',function(){
-        gulp.src('./jade/*.jade')
-          .pipe(jade())
-          .pipe(gulp.dest('./public/'));
-      });
-
-      // watch
-      gulp.watch('./jade/*.jade',['compilarJade']);
-      </code>
-    </pre>
-  </section>
-  <section>
-    <h2>Listo. Ya sabes gulp.</h2>
-    <img src="http://stream1.gifsoup.com/view1/20140121/4958269/brent-rambo-o.gif" width="60%">
-  </section>
-  <section>
-    <h2>Front Kick Alpha</h2>
-    <i>Un Flujo de trabajo front end :)</i>
-    <a href="https://github.com/jeanpaul1304/front-kick-alpha">https://github.com/jeanpaul1304/front-kick-alpha</a>
+    <h2>Service Worker</h2>
+    <img src="https://ascott1.github.io/sw-demo/img/gear.png" alt="">
   </section>
 </section>
-<!-- End gulp section -->
-<!-- Init Final section -->
+<!-- End Technoogy section -->
+<!-- Init Service Worker section -->
+<section>
+	<section>
+      <h2>Why Service Worker it's important?</h2>
+      <img src="https://blog.keycdn.com/blog/wp-content/uploads/2017/05/service-worker-diagram.png" alt="">
+    </section>
+  <section>
+    <h2>Register SW</h2>
+      <pre>
+        <code data-trim data-noescape>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+        </code>
+      </pre>
+  </section>
+    <section>
+        <h2>Install SW</h2>
+        <pre>
+          <code>
+var CACHE_NAME = 'my-site-cache-v1';
+var urlsToCache = [
+  '/',
+  '/styles/main.css',
+  '/script/main.js'
+];
+
+self.addEventListener('install', function(event) {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+          </code>
+      </pre>
+    </section>
+
+    <section>
+        <h2>Request and response from cache</h2>
+        <pre>
+          <code>
+  self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+          </code>
+      </pre>
+    </section>
+    <section>
+        <pre>
+            <code>
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        // IMPORTANT: Clone the request
+        var fetchRequest = event.request.clone();
+        return fetch(fetchRequest).then(
+          function(response) {
+            // Check if we received a valid response
+            if(!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            // IMPORTANT: Clone the response. A response is a stream
+            // and because we want the browser to consume the response
+            // as well as the cache consuming the response, we need
+            // to clone it so we have two streams.
+            var responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then(function(cache) {
+                cache.put(event.request, responseToCache);
+              });
+            return response;
+          }
+        );
+      })
+    );
+});
+            </code>
+        </pre>
+    </section>
+  <section>
+    <h3>And what happens if I wanna do something like this ...</h3>
+    <img src="https://developers.google.com/web/tools/workbox/images/modules/workbox-strategies/stale-while-revalidate.png">
+  </section>
+</section>
+<!-- End SW section -->
+<!-- Init Workbox section -->
+<section>
+    <section>
+        <img src="https://developers.google.com/web/tools/workbox/images/Workbox-Logo-Grey.svg" alt="">
+    </section>
+    <section>
+        <pre>
+            <code>
+workbox.routing.registerRoute(
+  /\.(?:js|css)$/,
+  workbox.strategies.staleWhileRevalidate(),
+)
+            </code>
+        </pre>
+    </section>
+    <section>
+        <h2>Features</h2>
+        <ul>
+            <li>Pre-caching</li>
+            <li>Strategies</li>
+            <li>Expiration / Restrictions / Naming</li>
+            <li>Recipes</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Strategies</h2>
+    </section>
+    <section>
+        <h3>Stale-while-revalidate</h3>
+        <img src="https://developers.google.com/web/tools/workbox/images/modules/workbox-strategies/stale-while-revalidate.png" alt="">
+    </section>
+    <section>
+        <h3>Cache-First</h3>
+        <img src="https://developers.google.com/web/tools/workbox/images/modules/workbox-strategies/cache-first.png" alt="">
+    </section>
+    <section>
+        <h3>Network-First</h3>
+        <img src="https://developers.google.com/web/tools/workbox/images/modules/workbox-strategies/network-first.png" alt="">
+    </section>
+    <section>
+        <h3>Network-Only / Cache-Only</h3>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>Lighthouse</h2>
+        <img src="https://www.speedboost.xyz/blog/wp-content/uploads/2018/06/chrome-lighthouse.png" alt="">
+    </section>
+    <section>
+        <h2>Audit</h2>
+        <img src="https://developers.google.com/web/tools/lighthouse/images/category-scores.png">
+    </section>
+</section>
 <section>
 	<h1>Preguntas y comentarios</h1>
 </section>
@@ -434,13 +307,7 @@ cubes = (function() {
 		<tr>
 			<td>Diapositivas</td>
 			<td>
-				<a href="http://jeanpaul1304.github.io/gulpjs-expo">http://jeanpaul1304.github.io/gulpjs-expo</a>
-			</td>
-		</tr>
-		<tr>
-			<td>Front-kick-alpha</td>
-			<td>
-				<a href="https://github.com/jeanpaul1304/front-kick-alpha">https://github.com/jeanpaul1304/front-kick-alpha</a>
+				<a href="http://jeanpaul1304.github.io/gulpjs-expo">http://jeanpaul1304.github.io/pwa-expo</a>
 			</td>
 		</tr>
 	</table>	

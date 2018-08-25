@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>I/O Extended - PWA & Workbox</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+            <div class="hashtag-io">
+                #io18lima
+            </div>
+			<div class="slides">
+				<section data-background-video="https://d3k5xyayaartr5.cloudfront.net/programming-ide/programming-ide.webm">
+					<!--<h2>Progressive Web Apps & Workbox</h2>-->
+					<!--<h3>Jade - Stylus - Coffeescript</h3>-->
+					<h1>Progressive Web Apps & Workbox</h1>
+                    <img class="square-box" src="https://pbs.twimg.com/profile_images/2371746427/m7flod8ivuj5qw08mqd8.png" width="30%" alt="logo gdg lima">
+                    <img class="square-box" src="https://www.gdgmelbourne.com/wp-content/uploads/2018/04/google_io_2018_extended_logo_stacked_rgb.png" width="30%" alt="logo gdg lima">
+				</section>
+				<!-- Init vision section -->
+				<section>
+					<section style="color:#fff;" data-background-image="https://cdn.dribbble.com/users/509505/screenshots/3208608/c3792c47242863.587596151a99e.gif">
+						<h2 style="color:#fff;">My vision</h2>
+						<p>Web Power vs Mobile apps</p>
+						<i style="font-size:20px">Google Wave/Docs - iOS</i>
+						<br>
+						<i style="font-size:16px;">Why Jobs, Why!?</i>
+					</section>
+					<section>
+						<h2>Web App</h2>
+						<ul>
+                            <li>Practicity/Availability</li>
+							<li>Installation</li>
+							<li>Storage Space</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Give power to the web</h2>
+                        <img style="border:0;box-shadow: 1px 1px 5px gray" src="http://pa1.narvii.com/6666/c7de834218f67e4e722b6cd6e31d620fe54163f2_00.gif" alt="power stone">
+                        <br>
+                        <i style="font-size: 12px;">Yes, marvel fans, it's the infinity power stone</i>
+					</section>
+                    <section>
+                        <img src="https://www.digitallearning.es/wp-content/uploads/2017/08/HTML5_sticker.png" alt="">
+                    </section>
+                    <section>
+                        <h2>Tecnologias</h2>
+                        <img src="http://popel-studio.com/images/blog/what-is-html5/html5-illu.png" width="60%">
+                    </section>
+                </section>
+<!-- End vision section -->
+<!-- Init PWA section -->
+<section>
+  <section >
+    <img src="https://tweakyourbiz.com/wp-content/uploads/2018/05/main-image-1024x688.png" style="background:none;border:0;box-shadow:none;">
+  </section>
+  <section>
+    <img src="https://i.imgur.com/Q3cUg29.gif">
+    <h2>Si, una vez mas el meme de Peter Griffin</h2>
+  </section>
+  <section>
+    <h2>CSS needs a hero</h2>
+    <pre><code>
+body {
+  font: 12px Helvetica, Arial, sans-serif;
+}
+a.button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+    </code></pre>
+  </section>
+  <section>
+    <h2>How if we could omit braces?</h2>
+    <pre><code>
+body
+  font: 12px Helvetica, Arial, sans-serif;
+
+a.button
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+    </code></pre>
+  </section>
+  <section>
+    <h2>How about semi-colons?</h2>
+    <pre><code>
+body
+  font: 12px Helvetica, Arial, sans-serif
+
+a.button
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
+    </code></pre>
+  </section>
+  <section>
+    <h2>Keep things DRY</h2>
+    <i>DRY = Don't Repeat Yourself</i>
+    <pre><code>
+border-radius()
+  -webkit-border-radius: arguments
+  -moz-border-radius: arguments
+  border-radius: arguments
+
+body
+  font: 12px Helvetica, Arial, sans-serif
+
+a.button
+  border-radius(5px)  
+    </code></pre>
+  </section>
+<section>
+  <h2>How about transparent mixins?</h2>
+  <pre><code>
+border-radius()
+  -webkit-border-radius: arguments
+  -moz-border-radius: arguments
+  border-radius: arguments
+
+body
+  font: 12px Helvetica, Arial, sans-serif
+
+a.button
+  border-radius: 5px
+  </code></pre>
+</section>
+<section>
+  <h2>Create & Share</h2>
+  <pre><code>
+@import 'vendor'
+
+body
+  font: 12px Helvetica, Arial, sans-serif
+
+a.button
+  border-radius: 5px
+  </code></pre>
+</section>
+<section>
+  <h2>What if it were all optional?</h2>
+  <pre><code>
+fonts = helvetica, arial, sans-serif
+
+body {
+  padding: 50px;
+  font: 14px/1.4 fonts;
+}
+  </code></pre>
+</section>
+<section>
+  <h2>Si eso te gusta, mejor usa Stylus!</h2>
+  <a href="http://stylus-lang.com/" target="_blank">http://stylus-lang.com/</a>
+</section>
+</section>
+<!-- End Stylus section -->
+<!-- Init CoffeeScript section -->
+<section>
+  <section>
+    <h2>CoffeeScript</h2>
+    <img src="http://devstickers.com/assets/img/pro/t4mv.png">
+  </section>
+  <section>
+  <h2>Vista rapida</h2>
+    <pre class="two"><code>
+      # Asigancion:
+      number = 42
+      opposite = true
+
+      # Condicionales
+      number = 1304 if opposite
+
+      # Functions
+      cuadrado = (x) -> x * x
+
+      # Arrays
+      list = [1, 2, 3, 4, 5]
+    </code></pre>
+    <pre class="two"><code>
+      var number, apposite, cuadrado list;
+
+      number = 42;
+
+      opposite = true;
+
+      if (opposite) {
+        number = -42;
+      }
+
+      cuadrado = function(x) {
+        return x * x;
+      }
+
+      list = [1, 2, 3, 4, 5];
+    </code></pre>
+  </section>
+  <section>
+    <h2>Vista rapida</h2>
+    <pre class="two"><code>
+# Objetos
+math =
+  root: Math.sqrt
+  square: square
+  cube: (x) -> x * square x
+
+# Existencia
+alert "Epa! Coffescript" if elvis?
+
+# Array comprehensions
+cubes = (math.cube num for num in list)
+    </code></pre>
+    <pre class="two"><code>
+var math, cubes;
+// Objetos
+math = {
+  root: Math.sqrt,
+  square: square,
+  cube: function(x){
+    return x * square(x)
+  }
+};
+
+// Existencia
+if (typeof elvis !== "undefined" && elvis !== null){
+  alert('Epa! Coffescript');
+}
+
+// Array comprehensions
+cubes = (function() {
+  var i, len, results;
+  results = [];
+  for (i = 0, len = list.length; i < len; i++) {
+    num = list[i];
+    results.push(math.cube(num));
+  }
+  return results;
+})();
+      </code>
+    </pre>
+  </section>
+  <section>
+    <h2>Mas info</h2>
+    <a href="http://coffeescript.org/">http://coffeescript.org/</a>
+    <h2>Util</h2>
+    <a href="http://js2.coffee/">http://js2.coffee/</a>
+  </section>
+</section>
+<!-- End CoffeeScript section -->
+<!-- Init gulp section -->				
+<section>
+	<section data-background-image="https://carlosazaustre.es/blog/content/images/2014/12/2014-03-10-07.jpg">
+		<h2>Gulp</h2>
+		<h3>The streaming build system</h3>
+	</section>
+  <section>
+    <h2>Antes de empezar</h2>
+    <ul >
+      <li> Instalar <a href="https://nodejs.org/en/">Node.js</a></li>
+      <li>
+        Iniciar modulo
+      </li>
+    </ul>
+
+      <pre><code>
+        $ npm init
+      </code></pre>
+    <ul>
+      <li> Instalar modulos con npm</li>
+    </ul>
+    <pre><code>
+      $ npm install --save-dev gulp
+      $ npm install --save-dev gulp-jade
+    </code>
+    </pre>
+  </section>
+  <section>
+    <h2>Era pre-gulp - Grunt</h2>
+    <img src="http://frontendlabs.io/wp-content/uploads/2014/08/grunt-file-manipulation.png">
+    <br>
+    <i>Source: <a href="http://frontendlabs.io">Frontendlabs.io</a></i>
+  </section>
+  <section>
+    <h2>Ahora con gulp</h2>
+
+    <img src="http://frontendlabs.io/wp-content/uploads/2014/08/gulp-file-manipulation.png">
+    <br>
+    <i>Source: <a href="http://frontendlabs.io">Frontendlabs.io</a></i>
+  </section>
+  <section>
+    <h2>Como funciona gulp?</h2>
+    <ul>
+      <li>Selecciona archivos</li>
+      <li>Lo transforma</li>
+      <li>Los repone o re-ubica una copia</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Gulp solo tiene 4 comandos!</h2>
+    <p>Sus cuatro fantasticos</p>
+    <img src="http://www.guerra-creativa.com/img/uploads/images/lfgfm290.jpg" width="50%">
+  </section>
+  <section >
+    <img src="http://cdne.elbocon.pe/thumbs/uploads/articles/images/seleccion-peruana-es-momento-d-jpg_900x0.jpg">
+    <h2>Nope!</h2>
+  </section>
+  <section data-background-image="https://i.ytimg.com/vi/liYwotnUado/maxresdefault.jpg">
+    <h2 style="background:rgba(0,0,0,.9)">
+    Gulp task <br>
+      Gulp src <br>
+      Gulp dest <br>
+      Gulp watch </h2>
+    </ul>
+    <br>
+  </section>
+  <section>
+    <h2>Gulp task</h2>
+    <pre><code>
+      gulp.task('nombretarea',function(){
+        // aqui continuamos
+      });
+    </code></pre>
+  </section>
+  <section>
+    <h2>Gulp src</h2>
+    <pre><code>
+      gulp.task('compilarJade',function(){
+        gulp.src('ruta/de/archivo')
+        // aun continuamos aqui
+      });
+    </code></pre>
+  </section>
+  <section>
+    <h2>Gulp dest</h2>
+    <pre><code>
+      gulp.task('compilarJade',function(){
+        gulp.src('./jade/*.jade')
+          .pipe(gulp.dest('ruta/de/destino'));
+      });
+    </code></pre>
+    <i>Tarea simple que mueve un archivo de un lugar a otro</i>
+  </section>
+  <section>
+    <h2>wait! Que es pipe?</h2>
+    <img src="http://www.codeproject.com/KB/Nodejs/1064203/57430c2c-9e8e-11e5-82cc-a6ff65e6b75f.png" width="50%">
+  </section>
+  <section>
+    <h2>Gulp dest</h2>
+    <pre><code>
+      gulp.task('compilarJade',function(){
+        gulp.src('./jade/*.jade')
+          .pipe(jade())
+          .pipe(gulp.dest('./public/'));
+      });
+      //continuamos aqui
+    </code></pre>
+    <i>Tarea para compilar jade</i>
+  </section>
+  <section>
+    <h2>Gulp watch</h2>
+    <pre><code>
+      // tarea para compilar jade
+      gulp.task('compilarJade',function(){
+        gulp.src('./jade/*.jade')
+          .pipe(jade())
+          .pipe(gulp.dest('./public/'));
+      });
+
+      // watch
+      gulp.watch('./jade/*.jade',['compilarJade']);
+    </code></pre>
+  </section>
+  <section>
+    <h2>Estructura de un archivo de gulp</h2>
+    <pre>
+      <code>
+      // variables que contienen los modulos que usamos
+      var gulp = require('gulp');
+      var jade = require('gulp-jade');
+
+      // tarea para compilar jade
+      gulp.task('compilarJade',function(){
+        gulp.src('./jade/*.jade')
+          .pipe(jade())
+          .pipe(gulp.dest('./public/'));
+      });
+
+      // watch
+      gulp.watch('./jade/*.jade',['compilarJade']);
+      </code>
+    </pre>
+  </section>
+  <section>
+    <h2>Listo. Ya sabes gulp.</h2>
+    <img src="http://stream1.gifsoup.com/view1/20140121/4958269/brent-rambo-o.gif" width="60%">
+  </section>
+  <section>
+    <h2>Front Kick Alpha</h2>
+    <i>Un Flujo de trabajo front end :)</i>
+    <a href="https://github.com/jeanpaul1304/front-kick-alpha">https://github.com/jeanpaul1304/front-kick-alpha</a>
+  </section>
+</section>
+<!-- End gulp section -->
+<!-- Init Final section -->
+<section>
+	<h1>Preguntas y comentarios</h1>
+</section>
+<section data-background-image="http://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2014/08/Rf7gi14.gif">
+	<h1>Gracias!</h1>
+	<table style="background:rgba(0,0,0,.7);">
+		<tr>
+			<td>Github</td>
+			<td>
+					<a href="http://github.com/jeanpaul1304">http://github.com/jeanpaul1304</a>
+			</td>
+		</tr>
+		<tr>
+			<td>Diapositivas</td>
+			<td>
+				<a href="http://jeanpaul1304.github.io/gulpjs-expo">http://jeanpaul1304.github.io/gulpjs-expo</a>
+			</td>
+		</tr>
+		<tr>
+			<td>Front-kick-alpha</td>
+			<td>
+				<a href="https://github.com/jeanpaul1304/front-kick-alpha">https://github.com/jeanpaul1304/front-kick-alpha</a>
+			</td>
+		</tr>
+	</table>	
+	<i>and as <a href="#">@jeanpaul1304</a> at all long the web...</i>
+	<p>‪<a href="#">#‎ioextended16</a> <a href="#">‪#‎gdglima</a>‬‬</p>
+</section>
+
+	<!-- End Final section -->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

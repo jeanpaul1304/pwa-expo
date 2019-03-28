@@ -24,15 +24,15 @@
 	<body>
 		<div class="reveal">
             <div class="hashtag-io">
-                #io18lima
+                #front.pe
             </div>
 			<div class="slides">
 				<section data-background-video="https://d3k5xyayaartr5.cloudfront.net/programming-ide/programming-ide.webm">
 					<!--<h2>Progressive Web Apps & Workbox</h2>-->
 					<!--<h3>Jade - Stylus - Coffeescript</h3>-->
 					<h1>Progressive Web Apps & Workbox</h1>
-                    <img class="square-box" src="https://pbs.twimg.com/profile_images/2371746427/m7flod8ivuj5qw08mqd8.png" width="30%" alt="logo gdg lima">
-                    <img class="square-box" src="https://www.gdgmelbourne.com/wp-content/uploads/2018/04/google_io_2018_extended_logo_stacked_rgb.png" width="30%" alt="logo gdg lima">
+                    <img class="square-box" src="img/front.pe.jpg" alt="logo Frontend Perú">
+                    <!--<img class="square-box" src="https://www.gdgmelbourne.com/wp-content/uploads/2018/04/google_io_2018_extended_logo_stacked_rgb.png" width="30%" alt="logo gdg lima">-->
 				</section>
 				<!-- Init vision section -->
 				<section>
@@ -53,7 +53,7 @@
 					</section>
 					<section>
 						<h2>Give power to the web</h2>
-                        <img style="border:0;box-shadow: 1px 1px 5px gray" src="http://pa1.narvii.com/6666/c7de834218f67e4e722b6cd6e31d620fe54163f2_00.gif" alt="power stone">
+                        <img style="border:0;box-shadow: 1px 1px 5px gray" src="https://media3.giphy.com/media/nZMK3dqPo3RSg/giphy.gif" alt="power stone">
                         <br>
                         <i style="font-size: 12px;">Yes, marvel fans, it's the infinity power stone</i>
 					</section>
@@ -95,44 +95,40 @@
   <section>
     <h2>But, what we need to implement it?</h2>
     <ul>
-      <li>Chrome Dev Tools</li>
-      <li>Manifest</li>
-      <li>Push Notification</li>
-      <li>Cache API</li>
-      <li>Service Worker</li>
-      <li>Workbox</li>
-      <li>Web Storage API</li>
-      <li>Ligthhouse</li>
+			<li>Manifest</li>
+			<li>Chrome Dev Tools</li>
+			<li>Lighthouse</li>
+			<li>Service Workers</li>
+			<li>Workbox</li>
+			<li>Cache API</li>
+			<li>Web Storage API</li>
+			<li>HTTPS</li>
     </ul>
   </section>
+	<section>
+		<h2>Manifest</h2>
+		<img src="https://cdn-images-1.medium.com/max/1600/1*k07wulFO297SXn7EZ-Xaow.png">
+	</section>
   <section>
     <h2>Chrome Dev Tools</h2>
     <img src="https://cdn-images-1.medium.com/max/620/1*AO_YIKlU_YHPydGBu2DH9w.jpeg" alt="">
   </section>
-  <section>
-    <h2>Manifest</h2>
-    <img src="https://cdn-images-1.medium.com/max/1600/1*k07wulFO297SXn7EZ-Xaow.png">
-  </section>
-  <section>
-    <h2>Push Notification</h2>
-    <img src="http://s3.amazonaws.com/lurndownloads/blog/wp-content/uploads/2017/04/12044341/img1.jpg" alt="">
-  </section>
-  <section>
-    <h2>Web Cache API</h2>
-    <img src="http://studyclues.com/wp-content/uploads/2016/05/HTML5-appCache.png" alt="">
-  </section>
-  <section>
-    <h2>Service Worker</h2>
-    <img src="https://ascott1.github.io/sw-demo/img/gear.png" alt="">
-  </section>
+	<section>
+		<h2>Web Cache/Storage API</h2>
+		<img src="http://studyclues.com/wp-content/uploads/2016/05/HTML5-appCache.png" alt="">
+	</section>
 </section>
 <!-- End Technoogy section -->
 <!-- Init Service Worker section -->
 <section>
 	<section>
       <h2>Why Service Worker it's important?</h2>
-      <img src="https://blog.keycdn.com/blog/wp-content/uploads/2017/05/service-worker-diagram.png" alt="">
-    </section>
+      <!--<img src="https://blog.keycdn.com/blog/wp-content/uploads/2017/05/service-worker-diagram.png" alt="">-->
+	</section>
+	<section>
+		<h2>What's a service worker?</h2>
+		<img src="https://cdn-images-1.medium.com/max/2600/1*oOcY2Gn-LVt1h-e9xOv5oA.jpeg" alt="sw">
+	</section>
   <section>
     <h2>Register SW</h2>
       <pre>
@@ -257,18 +253,15 @@ workbox.routing.registerRoute(
     <section>
         <h2>Features</h2>
         <ul>
-            <li>Pre-caching</li>
-            <li>Strategies</li>
-            <li>Expiration / Restrictions / Naming</li>
-            <li>Recipes</li>
+					<li>Pre-caching</li>
+					<li>Expiration</li>
+					<li>Strategies</li>
+					<li>Recipes</li>
+					<li>Background Sync</li>
         </ul>
     </section>
     <section>
         <h2>Strategies</h2>
-    </section>
-    <section>
-        <h3>Stale-while-revalidate</h3>
-        <img src="https://developers.google.com/web/tools/workbox/images/modules/workbox-strategies/stale-while-revalidate.png" alt="">
     </section>
     <section>
         <h3>Cache-First</h3>
@@ -278,6 +271,10 @@ workbox.routing.registerRoute(
         <h3>Network-First</h3>
         <img src="https://developers.google.com/web/tools/workbox/images/modules/workbox-strategies/network-first.png" alt="">
     </section>
+		<section>
+			<h3>Stale-while-revalidate</h3>
+			<img src="https://developers.google.com/web/tools/workbox/images/modules/workbox-strategies/stale-while-revalidate.png" alt="">
+		</section>
     <section>
         <h3>Network-Only / Cache-Only</h3>
     </section>
@@ -289,15 +286,47 @@ workbox.routing.registerRoute(
     </section>
     <section>
         <h2>Audit</h2>
-        <img src="https://developers.google.com/web/tools/lighthouse/images/category-scores.png">
+        <img src="https://user-images.githubusercontent.com/316891/51218948-6e60ef00-18e3-11e9-8a48-535b59a41301.png">
     </section>
+		<section>
+			<h2>Google Web dev</h2>
+			<img width="50%" src="https://web.dev/images/social.png" alt="">
+		</section>
 </section>
 <section>
-	<h1>Preguntas y comentarios</h1>
+	<section>
+		<h2>PWA Pros</h2>
+		<ul>
+			<li>Only have to build and maintain one app</li>
+			<li>Uses the same technologies that web developers already use</li>
+			<li>PWA are rapidly improving</li>
+			<li>It’s based on maintaining the open web and uses standards-based technologies</li>
+		</ul>
+	</section>
+	<section>
+		<h2>PWA Cons</h2>
+		<ul>
+			<li>iOS not supported - WIP 12.0</li>
+			<li>Uses the same technologies that web developers already use</li>
+			<li>Doesn’t have a presence in the App Store</li>
+			<li>It doesn’t support all OTT options like streaming devices</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Exciting news</h2>
+		<ul>
+			<li>Google Play Store and Microsoft Store are open for PWA</li>
+			<li>Google adds fingerprint support to Chrome</li>
+			<li>Chrome is adding support to fingerprint auth</li>
+		</ul>
+		<br/>
+		<img src="https://www.bram.us/wordpress/wp-content/uploads/2019/02/twa-pwa.png" style="margin-top:20px;" width="50%" alt="">
+	</section>
 </section>
-<section data-background-image="http://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2014/08/Rf7gi14.gif">
-	<h1>Gracias!</h1>
-	<table style="background:rgba(0,0,0,.7);">
+<section style="color:#fff;" data-background-image="http://imagesmtv-a.akamaihd.net/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2014/08/Rf7gi14.gif">
+	<h1 style="color:#fff;">Gracias!</h1>
+	<h2 style="color:#fff;">Preguntas y comentarios</h2>
+	<table style="background:rgba(0,0,0,.7);color: #fff;">
 		<tr>
 			<td>Github</td>
 			<td>
@@ -312,7 +341,7 @@ workbox.routing.registerRoute(
 		</tr>
 	</table>	
 	<i>and as <a href="#">@jeanpaul1304</a> at all long the web...</i>
-	<p>‪<a href="#">#‎ioextended18</a> <a href="#">‪#‎gdglima</a>‬‬</p>
+	<p>‪<a href="#">front.pe</a>‬‬</p>
 </section>
 
 	<!-- End Final section -->
